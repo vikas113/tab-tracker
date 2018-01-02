@@ -10,10 +10,9 @@ app.use(bodyParser.json())
 app.use(bodyParser.json())
 app.use(cors())
 
-app.get('/status',(req,res)=>{
-    console.log('hello server')
+app.post('/register',(req,res)=>{
     res.send({
-        message:'server is running'
+        message:`hi ${req.body.email} you are registered`
     })
 })
 
